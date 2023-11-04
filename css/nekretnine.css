@@ -1,0 +1,54 @@
+html {
+    background-color: #fdf1d3;
+}
+
+.real-estates-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,300px));
+    gap: 20px;
+}
+
+.real-estates-name {
+    text-align: left;
+    font-weight: bold;
+}
+
+.real-estates-type {
+    text-align: center;
+}
+
+.real-estates-quadrature {
+    text-align: left;
+}
+
+.real-estates-price {
+    text-align: right;
+}
+
+#stan .real-estates-item{
+    background-color: white;
+}
+
+.real-estates-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.real-estates-item img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.real-estates-item button {
+    margin: 0 auto;
+    display: block;
+}
+
+#kuca .real-estates-item{
+    background-color: powderblue;
+}
+
+#pp .real-estates-item{
+    background-color: green;
+}

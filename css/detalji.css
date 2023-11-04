@@ -1,0 +1,44 @@
+html{
+    background-color: #fdf1d3;
+    padding: 5px 50px 50px 50px;
+}
+
+#osnovno img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#osnovno p {
+    margin-bottom: 40px;
+}
+
+.table-details {
+    width: 100%;
+    border-spacing: 0 40px;
+}
+
+.lista-upita {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-upita li {
+    border: 1px solid black;
+    margin-bottom: 20px; 
+    background-color: white;
+}
+
+.korisnik {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.upit {
+    padding: 10px;
+}
+
+
+
+
+
+
