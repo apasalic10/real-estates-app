@@ -3,42 +3,51 @@ html{
     padding: 5px 50px 50px 50px;
 }
 
-#osnovno img{
-    width: 100%;
-    margin-bottom: 10px;
+.details {
+    display: grid;
 }
 
-#osnovno p {
-    margin-bottom: 40px;
+.details h3{
+    grid-column: 1/2;
 }
 
-.table-details {
+.details img {
     width: 100%;
-    border-spacing: 0 40px;
+}
+
+#osnovno p{
+    margin-bottom: 35px;
+}
+
+#detalji-naslov {
+    margin: 0;
+}
+
+#detalji {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0;
+}
+
+.grid-item {
+    grid-column: span 1;
+}
+
+.grid-item-description {
+    grid-column: span 2;
 }
 
 .lista-upita {
-    list-style-type: none;
-    padding: 0;
+    display: grid;
+    gap: 20px;
 }
 
-.lista-upita li {
-    border: 1px solid black;
-    margin-bottom: 20px; 
+.upit-item {
+    padding: 15px;
     background-color: white;
+    border: 2px solid black;
 }
 
-.korisnik {
-    padding: 10px;
-    font-weight: bold;
+.upit-item p {
+    margin-top: 0;
 }
-
-.upit {
-    padding: 10px;
-}
-
-
-
-
-
-
