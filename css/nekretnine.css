@@ -43,6 +43,9 @@ html {
 .real-estates-item button {
     margin: 0 auto;
     display: block;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    border-radius: 5%;
 }
 
 #kuca .real-estates-item{
@@ -51,4 +54,8 @@ html {
 
 #pp .real-estates-item{
     background-color: green;
+}
+
+p,h2 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }

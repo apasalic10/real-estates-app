@@ -9,6 +9,7 @@ html{
 
 .details h3{
     grid-column: 1/2;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .details img {
@@ -51,3 +52,8 @@ html{
 .upit-item p {
     margin-top: 0;
 }
+
+p{
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
