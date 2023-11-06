@@ -11,6 +11,10 @@ html {
 .menu-container {
     text-align: center;
     width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 .menu li{
@@ -28,13 +32,4 @@ html {
 
 a {
     text-decoration: none;
-}
-
-.menu {
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
 }
