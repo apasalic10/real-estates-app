@@ -1,6 +1,9 @@
 html {
     background-color: #fdf1d3;
-    padding: 10px 30px 30px 30px;
+}
+
+body {
+    margin-top: 100px;
 }
 
 .real-estates-list {
@@ -43,10 +46,10 @@ html {
 
 .real-estates-item button {
     margin: 0 auto;
-    display: block;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
-    border-radius: 5%;
+    border-radius: 10%;
+    width: 50%;
 }
 
 #kuca .real-estates-item{
@@ -57,6 +60,21 @@ html {
     background-color: green;
 }
 
-p,h2 {
+p {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+h2 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
 }

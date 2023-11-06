@@ -1,10 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
 html {
     background-color: #fdf1d3;
-    padding: 10px 30px 30px 30px;
 }
 
 .menu-container {
     text-align: center;
+    width: 100%;
 }
 
 .menu li{
@@ -13,8 +19,22 @@ html {
     margin: 10px 10px auto;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
+    padding: 10px 0;
 }
 
 .menu a:hover{
     color: #ff9900;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
 }

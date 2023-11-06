@@ -1,18 +1,22 @@
 html {
     background-color: #fdf1d3;
-    padding: 10px 30px 30px 30px;
+}
+
+body {
+    margin-top: 100px;
 }
 
 .profil-detalji {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     font-size: 20px;
+    width: 400px;
 }
 
 .profile-picture {
     grid-column: span 2;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 60px;
 }
 
@@ -20,10 +24,27 @@ html {
     grid-column: span 1;
     margin-bottom: 30px;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 16px;
 }
 
 #ime, #prezime, #username, #password {
-    padding: 15px;
-    font-size: 20px;
+    padding: 10px;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.profil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }

@@ -1,6 +1,9 @@
 html{
     background-color: #fdf1d3;
-    padding: 10px 30px 30px 30px;
+}
+
+body {
+    margin-top: 100px;
 }
 
 .details {
@@ -14,6 +17,7 @@ html{
 
 .details img {
     width: 100%;
+    height: 300px;
 }
 
 #osnovno p{
@@ -55,4 +59,14 @@ html{
 
 p{
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
