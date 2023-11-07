@@ -13,16 +13,7 @@ body {
 }
 
 .real-estates-name {
-    text-align: left;
     font-weight: bold;
-}
-
-.real-estates-type {
-    text-align: center;
-}
-
-.real-estates-quadrature {
-    text-align: left;
 }
 
 .real-estates-price {
@@ -46,6 +37,7 @@ body {
 
 .real-estates-item button {
     margin: 0 auto;
+    display: block;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
     border-radius: 10%;
