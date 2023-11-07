@@ -33,6 +33,7 @@ body {
 .real-estates-item img {
     width: 100%;
     border-radius: 5%;
+    height: 185px;
 }
 
 .real-estates-item button {
