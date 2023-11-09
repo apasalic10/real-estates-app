@@ -4,6 +4,7 @@ html{
 
 body {
     margin-top: 100px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .details {
@@ -12,7 +13,6 @@ body {
 
 .details h3{
     grid-column: 1/2;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .details img {
@@ -42,23 +42,28 @@ body {
     grid-column: span 2;
 }
 
+#upiti {
+    width: 100%; 
+}
+
 .lista-upita {
-    display: grid;
-    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.upit-item {
-    padding: 15px;
+.lista-upita li {
+    border: 1px solid black;
+    margin-bottom: 20px; 
     background-color: white;
-    border: 2px solid black;
 }
 
-.upit-item p {
-    margin-top: 0;
+.korisnik {
+    font-weight: bold;
+    padding: 10px;
 }
 
-p{
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+.upit {
+    padding: 10px;
 }
 
 header {
