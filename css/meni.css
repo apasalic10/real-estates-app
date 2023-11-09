@@ -8,6 +8,10 @@ html {
     background-color: #fdf1d3;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 .menu-container {
     text-align: center;
     width: 100%;

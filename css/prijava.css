@@ -2,6 +2,10 @@ html {
     background-color: #fdf1d3;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 header {
     position: fixed;
     overflow: hidden;
