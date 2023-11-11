@@ -47,3 +47,8 @@ header {
     align-items: center;
     height: 80vh;
 }
+
+#menu-screen {
+    width: inherit;
+    border: 0;
+}

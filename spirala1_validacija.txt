@@ -1,0 +1,38 @@
+1.Zadatak:
+- Za validaciju HTML i CSS datoteka u "Spirali 1" koristio sam validator.w3.org koji se može pronaći
+na sledećim linkovima: https://validator.w3.org/ i https://jigsaw.w3.org/css-validator/
+
+Prvo sam validirao HTML datoteke:
+
+1. meni.html
+- Datoteka meni.html nije imala error-a prije validacije.
+
+2. prijava.html
+- Datoteka profil.html je imala 4 error-a prije validacije i to su:
+	-  Bad value 100% for attribute width on element iframe: Expected a digit but saw % instead.
+	- The scrolling attribute on the iframe element is obsolete. Use CSS instead.
+	- The frameborder attribute on the iframe element is obsolete. Use CSS instead.
+	-  Start tag body seen but an element of the same type was already open.
+Svi errori su ispravljeni i nakon ponovne validacije nije bilo niti jednog.
+
+3. nekretnine.html
+- Datoteka nekretnine.html je imala 4 error-a prije validacije i oni su isti kao i na stranici prijava.html
+koji su takođe ispravljeni i nakon ponovne validacije nije bilo niti jednog error-a.
+
+4. detalji.html
+- Datoteka detalji.html je imala 4 error-a prije validacije i oni su isti kao i na stranici prijava.html
+koji su takođe ispravljeni i nakon ponovne validacije nije bilo niti jednog error-a.
+
+5. profil.html
+- Datoteka profil.html je imala 4 error-a prije validacije i oni su isti kao i na stranici prijava.html
+koji su takođe ispravljeni i nakon ponovne validacije nije bilo niti jednog error-a.
+
+
+Nakon HTML datoteka validirao sam CSS datoteke:
+
+- Niti jedna datoteka nije imala error-e prije validacije, ali sam ih morao prepravljati pri validiaciji
+HTML datoteka i kako bi ispravio error-e koji su bili na tim datotekama.
+
+
+
+
