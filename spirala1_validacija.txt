@@ -33,6 +33,8 @@ Nakon HTML datoteka validirao sam CSS datoteke:
 - Niti jedna datoteka nije imala error-e prije validacije, ali sam ih morao prepravljati pri validiaciji
 HTML datoteka i kako bi ispravio error-e koji su bili na tim datotekama.
 
+Nakon modifikacije 2.zadatka i validacije fajlova (profil.html i profil.css) nije bilo niti jednog error-a.
+
 
 
 

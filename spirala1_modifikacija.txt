@@ -1,0 +1,7 @@
+Modifikaciju izgleda profil stranice sam uradio pomoću "media query-a" uz pomoću kojeg sam
+specificirao kako će stranica izgledati do 500px i kako će stranica izgledati nakon što se 
+pređe 500px odnosno (>=500px). Za pravljenje izgleda stranice unutar "media query-a" sam koristio 
+grid koji sam modificirao u zavisnosti od potreba zadatka koristeci naredbu "span" koja specificira koliko 
+će neki element u HTML-u da zauzima kolona ili redova u zavisnosti od potreba. Što se tiče izgleda za 
+screenove <500px napravio sam iste postavke kao što su bile i prije modifikacije bez korištenja
+media query-a jer nema potrebe.
