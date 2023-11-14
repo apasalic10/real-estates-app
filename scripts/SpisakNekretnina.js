@@ -146,3 +146,5 @@ const kriterij = {
     max_kvadratura: 50
 }
 spNekretnina.filtrirajNekretnine(kriterij);
+
+export {SpisakNekretnina};
