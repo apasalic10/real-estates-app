@@ -20,7 +20,7 @@ function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine) {
         divListaItema.innerHTML += "<div class='real-estates-item'>" +
             "<img src='" + imgSrc + "' alt='" + nekretnina.tip_nekretnine + "'>" +
             "<div class='real-estates-details'>" +
-            "<p class='real-estates-name'>Naziv stana: " + nekretnina.naziv + "</p>" +
+            "<p class='real-estates-name'>" + nekretnina.naziv + "</p>" +
             "<p class='real-estates-quadrature'>Kvadratura: " + nekretnina.kvadratura + "</p>" +
             "<p class='real-estates-price'>Cijena: " + nekretnina.cijena + "</p>" +
             "</div>" +
