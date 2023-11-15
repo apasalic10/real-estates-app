@@ -74,7 +74,7 @@ const listaNekretnina = [{
 {
     id: 3,
     tip_nekretnine: "Kuća",
-    naziv: "Kuca Hrasno brdo",
+    naziv: "Kuća Hrasno brdo",
     kvadratura: 185,
     cijena: 240000,
     tip_grijanja: "struja",
@@ -107,6 +107,40 @@ const listaNekretnina = [{
         korisnik_id: 2,
         tekst_upita: "Phasellus viverra nulla."
     }]
+},
+{
+    id: 5,
+    tip_nekretnine: "Poslovni prostor",
+    naziv: "Poslovni prostor Stari Grad",
+    kvadratura: 35,
+    cijena: 90000,
+    tip_grijanja: "struja",
+    lokacija: "Stari Grad",
+    godina_izgradnje: 2001,
+    datum_objave: "25.08.2023.",
+    opis: "Magnis dis parturient montes.",
+    upiti: [{
+        korisnik_id: 2,
+        tekst_upita: "Integer tincidunt."
+    }
+    ]
+},
+{
+    id: 6,
+    tip_nekretnine: "Kuća",
+    naziv: "Kuća Dobrinja",
+    kvadratura: 190,
+    cijena: 205000,
+    tip_grijanja: "plin",
+    lokacija: "Dobrinja",
+    godina_izgradnje: 2008,
+    datum_objave: "20.05.2023.",
+    opis: "Magnis dis parturient montes.",
+    upiti: [{
+        korisnik_id: 2,
+        tekst_upita: "Integer tincidunt."
+    }
+    ]
 }]
 
 const listaKorisnika = [{
