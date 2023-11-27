@@ -1,10 +1,7 @@
-import {SpisakNekretnina} from '../scripts/SpisakNekretnina.js';
-
 function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine) {
     
-    let divListaItema = divReferenca.querySelector(".real-estates-list");
     let nekretnine = instancaModula.filtrirajNekretnine({ tip_nekretnine: tip_nekretnine });
-
+    
     for(let nekretnina of nekretnine){
 
         let imgSrc;
@@ -17,7 +14,7 @@ function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine) {
             imgSrc = "https://jungic.hr/wp-content/uploads/2017/08/moderni-ured.jpg";
         }
 
-        divListaItema.innerHTML += "<div class='real-estates-item'>" +
+        divReferenca.innerHTML += "<div class='real-estates-item'>" +
             "<img src='" + imgSrc + "' alt='" + nekretnina.tip_nekretnine + "'>" +
             "<div class='real-estates-details'>" +
             "<p class='real-estates-name'>" + nekretnina.naziv + "</p>" +
@@ -28,7 +25,7 @@ function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine) {
             "</div>";
     }    
    
-}
+};
 
 const divStan = document.getElementById("stan");
 const divKuca = document.getElementById("kuca");
@@ -154,7 +151,7 @@ const listaKorisnika = [{
     ime: "Neko2",
     prezime: "Nekic2",
     username: "username2",
-}]
+}];
 
 
 let nekretnine = SpisakNekretnina();
