@@ -10,16 +10,6 @@
     <header>
         <iframe id="menu-screen" src="meni.html"></iframe>
     </header>
-    <script>
-        function promijeniStranicu(err, data){
-            if(data && data.poruka){
-                window.location.href = "http://localhost:3000/nekretnine.html";
-            }
-            else{
-                alert("Pogrešan username ili password!");
-            }
-        }
-    </script>
     <div class="login-page">
         <div class="form">
         <form class="login-form">
@@ -30,7 +20,8 @@
         </div>
     </div>
     <script src="../scripts/PoziviAjax.js"></script> 
-    <script src="../scripts/updateMenu.js"></script> 
+    <script src="../scripts/updateMenu.js"></script>
+    <script src="../scripts/postLogin.js"></script>  
   </body>
 </body>
 </html>
