@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/prijava.css"  type="text/css"  rel="stylesheet" >
+    <title>Prijava</title>
+</head>
+<body>
+    <header>
+        <iframe id="menu-screen" src="meni.html"></iframe>
+    </header>
+    <script>
+        function promijeniStranicu(err, data){
+            if(data && data.poruka){
+                window.location.href = "http://localhost:3000/nekretnine.html";
+            }
+            else{
+                alert("Pogrešan username ili password!");
+            }
+        }
+    </script>
+    <div class="login-page">
+        <div class="form">
+        <form class="login-form">
+            <input id="usernameInput" type="text" placeholder="username" name="username"/>
+            <input id="passwordInput" type="password" placeholder="password" name="password"/>
+            <button id="prijavaButton" type="button" onclick="PoziviAjax.postLogin(username.value,password.value,promijeniStranicu)">Prijava</button>
+        </form>
+        </div>
+    </div>
+    <script src="../scripts/PoziviAjax.js"></script> 
+    <script src="../scripts/updateMenu.js"></script> 
+  </body>
+</body>
+</html>
