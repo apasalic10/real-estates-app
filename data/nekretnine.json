@@ -42,5 +42,49 @@
                 "tekst_upita": "Ovo je novododani upit"
             }
         ]
+    },
+    {
+        "id": 3,
+        "tip_nekretnine": "Kuća",
+        "naziv": "Kuća Hrasno",
+        "kvadratura": 120,
+        "cijena": 185000,
+        "tip_grijanja": "struja",
+        "lokacija": "Centar",
+        "godina_izgradnje": 2005,
+        "datum_objave": "20.08.2023.",
+        "opis": "Magnis dis parturient montes.",
+        "upiti": [
+            {
+                "korisnik_id": 2,
+                "tekst_upita": "Integer tincidunt."
+            },
+            {
+                "korisnik_id": 1,
+                "tekst_upita": "Ovo je novododani upit"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "tip_nekretnine": "Stan",
+        "naziv": "Trosoban stan - Marin Dvor",
+        "kvadratura": 69,
+        "cijena": 276000,
+        "tip_grijanja": "plin",
+        "lokacija": "Centar",
+        "godina_izgradnje": 2005,
+        "datum_objave": "20.08.2023.",
+        "opis": "Magnis dis parturient montes.",
+        "upiti": [
+            {
+                "korisnik_id": 2,
+                "tekst_upita": "Integer tincidunt."
+            },
+            {
+                "korisnik_id": 1,
+                "tekst_upita": "Ovo je novododani upit"
+            }
+        ]
     }
 ]
