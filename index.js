@@ -289,7 +289,7 @@ app.post('/marketing/osvjezi', function(req, res) {
                     izmijenjeneNekretnine.push(trazenaNekretnina);
                 });
     
-                if(JSON.stringify(staraListaOsvjezenih) === JSON.stringify(izmijenjeneNekretnine)){
+                if(jesuLiIstiNizovi(staraListaOsvjezenih,izmijenjeneNekretnine)){
                     res.status(200).json({nizNekretnina: []});
                 }
                 else{
@@ -303,5 +303,18 @@ app.post('/marketing/osvjezi', function(req, res) {
         }
     }
 });
+
+function jesuLiIstiNizovi(stariNizDatoteka,noviNizDatoteka){
+    noviNizDatoteka.forEach(nekretninaNova => {
+        let trazenaNekretnina = stariNizDatoteka.find(nekretnina => nekretnina.id === nekretninaNova.id);
+        if(trazenaNekretnina){
+            if(trazenaNekretnina.id === nekretninaNova.id && trazenaNekretnina.pretrage === nekretninaNova.pretrage && trazenaNekretnina.klikovi === nekretninaNova.klikovi){
+                return true;
+            }
+        }
+    });
+
+    return false;
+}
 
 app.listen(3000);
