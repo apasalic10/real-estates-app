@@ -249,7 +249,29 @@ app.post('/marketing/nekretnina/:id', function(req, res) {
 });
 
 app.post('/marketing/osvjezi', function(req, res) {
-    
+    if (req.body && req.body.nizNekretnina) {
+        req.session.nizNekretnina = Array.from(req.body.nizNekretnina);
+
+        fs.readFile('data/nekretnineMarketing.json', 'utf-8', function (err, data){
+            if (err) {
+                throw err;
+            }
+            
+            const nekretnine = JSON.parse(data);
+
+            let izmijenjeneNekretnine = [];
+
+            req.session.nizNekretnina.forEach(id => {
+                const trazenaNekretnina = nekretnine.find(nekretnina => nekretnina.id === id);
+                izmijenjeneNekretnine.push(trazenaNekretnina);
+            });
+
+            res.status(200).json({nizNekretnina: izmijenjeneNekretnine})
+        });
+    }
+    else{
+        res.status(200).json({nizNekretnina: []});
+    }
 });
 
 app.listen(3000);

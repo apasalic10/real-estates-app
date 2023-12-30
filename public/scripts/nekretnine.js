@@ -100,3 +100,9 @@ let filtirajDugme = document.getElementById("filtrirajButton").addEventListener(
 
 });
 
+const divNekretnine = document.getElementById("divNekretnine");
+
+var intervalId = setInterval(function() {
+    MarketingAjax.osvjeziPretrage(divNekretnine);
+    MarketingAjax.osvjeziKlikove(divNekretnine);
+}, 500);

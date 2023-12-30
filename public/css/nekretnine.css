@@ -121,6 +121,6 @@ header {
 
 .real-estates-item.expand {
     box-sizing: border-box;
-    grid-column: span 2;
     width: 500px;
+    grid-column: span 2;
 }
