@@ -17,6 +17,8 @@ app.use(session({
     saveUninitialized: true
 }));
 
+let staraListaOsvjezenih = [];
+
 app.post('/login', function(req,res){
     let objekat = req.body;
 
@@ -266,11 +268,39 @@ app.post('/marketing/osvjezi', function(req, res) {
                 izmijenjeneNekretnine.push(trazenaNekretnina);
             });
 
+            staraListaOsvjezenih = Array.from(izmijenjeneNekretnine);
             res.status(200).json({nizNekretnina: izmijenjeneNekretnine})
+            
         });
     }
     else{
-        res.status(200).json({nizNekretnina: []});
+        if(req.session && req.session.nizNekretnina){
+            fs.readFile('data/nekretnineMarketing.json', 'utf-8', function (err, data){
+                if (err) {
+                    throw err;
+                }
+                
+                const nekretnine = JSON.parse(data);
+    
+                let izmijenjeneNekretnine = [];
+    
+                req.session.nizNekretnina.forEach(id => {
+                    const trazenaNekretnina = nekretnine.find(nekretnina => nekretnina.id === id);
+                    izmijenjeneNekretnine.push(trazenaNekretnina);
+                });
+    
+                if(JSON.stringify(staraListaOsvjezenih) === JSON.stringify(izmijenjeneNekretnine)){
+                    res.status(200).json({nizNekretnina: []});
+                }
+                else{
+                    staraListaOsvjezenih = Array.from(izmijenjeneNekretnine);
+                    res.status(200).json({nizNekretnina: izmijenjeneNekretnine})
+                }
+            });
+        }
+        else{
+            res.status(200).json({nizNekretnina: []});
+        }
     }
 });
 
