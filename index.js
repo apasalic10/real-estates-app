@@ -305,6 +305,10 @@ app.post('/marketing/osvjezi', function(req, res) {
 });
 
 function jesuLiIstiNizovi(stariNizDatoteka,noviNizDatoteka){
+    if(stariNizDatoteka.length !== noviNizDatoteka.length){
+        return false;
+    }
+    
     noviNizDatoteka.forEach(nekretninaNova => {
         let trazenaNekretnina = stariNizDatoteka.find(nekretnina => nekretnina.id === nekretninaNova.id);
         if(trazenaNekretnina){
