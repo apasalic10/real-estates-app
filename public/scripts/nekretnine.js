@@ -54,6 +54,8 @@ function dugmeDetalji(){
 function spajanjeNekretnina(error,data){
     if(data){
         nekretnine.init(data, []);
+        let idSvihPrikazanihNekretnina = vratiSveFiltriraneNekretnine(nekretnine,undefined,undefined,undefined,undefined);
+        MarketingAjax.novoFiltriranje(idSvihPrikazanihNekretnina);
 
         spojiNekretnine(divStan, nekretnine, "Stan");
         spojiNekretnine(divKuca, nekretnine, "Kuća");
