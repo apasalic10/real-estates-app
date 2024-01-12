@@ -22,8 +22,13 @@ function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine, min_kvadr
             "<p class='real-estates-price'>Cijena: " + nekretnina.cijena + "</p>" +
             `<div class='pretrage' id=pretrage-${nekretnina.id}>Broj pretraga: 0</div>` +
             `<div class='klikovi' id=klikovi-${nekretnina.id}>Broj klikova: 0</div>` +
+            `<div class='podaci'>Lokacija: ${nekretnina.lokacija}</div>` +
+            `<div class='podaci'>Godina izgradnje: ${nekretnina.godina_izgradnje}</div>` +
             "</div>" +
+            "<div class='real-estates-buttons'>"+ 
             "<button class='details-button' " + `id=${nekretnina.id}` + ">Detalji</button>" +
+            "<button class='open-details-button' " + `id=open-${nekretnina.id}` + ">Otvori detalje</button>" +
+            "</div>"+
             "</div>";
     } 
 }
@@ -47,6 +52,26 @@ function dugmeDetalji(){
             });
 
             nekretnina.classList.add('expand');
+
+            document.querySelectorAll('.real-estates-item .podaci').forEach(podaciDiv => {
+                podaciDiv.style.display = "none";
+            });
+
+            document.querySelectorAll('.real-estates-item .open-details-button').forEach(opnDetaljiBtn => {
+                opnDetaljiBtn.style.display = "none";
+            });
+
+            let podaciDivovi = nekretnina.querySelectorAll('.podaci');
+            podaciDivovi.forEach(podaciDiv => {
+                podaciDiv.style.display = "block";
+            });
+
+            let openDetaljiButton = nekretnina.querySelector('.open-details-button');
+            openDetaljiButton.style.display = "block";
+            openDetaljiButton.addEventListener("click", () => {
+                let idNekretnine = parseInt(openDetaljiButton.id.split('-')[1],10);
+                window.location.href = `http://localhost:3000/detalji.html?id=${idNekretnine}`;
+            });
         });
     });
 }

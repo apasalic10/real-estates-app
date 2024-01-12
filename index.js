@@ -107,31 +107,30 @@ app.post('/upit', function(req,res){
             const trazeniKorisnikIndex = korisnici.findIndex(korisnik => korisnik.username === req.session.username);
     
             korisnikId = korisnici[trazeniKorisnikIndex].id;
-            
-        });
 
-        fs.readFile('data/nekretnine.json','utf-8',function(err,data){
-            if(err){
-                throw err;
-            }
-
-            const nekretnine = JSON.parse(data);
-
-            const trazenaNekretnina = nekretnine.find(nekretnina => nekretnina.id === objekat.nekretnina_id);
-
-            if (trazenaNekretnina) {
-                trazenaNekretnina.upiti.push({korisnik_id:korisnikId,tekst_upita:objekat.tekst_upita});
-
-                fs.writeFile('data/nekretnine.json', JSON.stringify(nekretnine, null, 4), 'utf-8', function(err) {
-                    if (err) {
-                        throw err;
-                    }
-
-                    res.status(200).json({ poruka: "Upit je uspješno dodan"});
-                });
-            } else {
-                res.status(400).json({ greska: `Nekretnina sa id-em ${objekat.nekretnina_id} ne postoji` });
-            }
+            fs.readFile('data/nekretnine.json','utf-8',function(err,data){
+                if(err){
+                    throw err;
+                }
+    
+                const nekretnine = JSON.parse(data);
+    
+                const trazenaNekretnina = nekretnine.find(nekretnina => nekretnina.id === objekat.nekretnina_id);
+    
+                if (trazenaNekretnina) {
+                    trazenaNekretnina.upiti.push({korisnik_id:korisnikId,tekst_upita:objekat.tekst_upita});
+    
+                    fs.writeFile('data/nekretnine.json', JSON.stringify(nekretnine, null, 4), 'utf-8', function(err) {
+                        if (err) {
+                            throw err;
+                        }
+    
+                        res.status(200).json({ poruka: "Upit je uspješno dodan"});
+                    });
+                } else {
+                    res.status(400).json({ greska: `Nekretnina sa id-em ${objekat.nekretnina_id} ne postoji` });
+                }
+            });
         });
     }
 });
@@ -302,6 +301,47 @@ app.post('/marketing/osvjezi', function(req, res) {
             res.status(200).json({nizNekretnina: []});
         }
     }
+});
+
+app.get('/nekretnina/:id', function(req, res) {
+    const idNekretnine = parseInt(req.params.id,10);
+
+    fs.readFile('data/nekretnine.json','utf-8',function(err,data){
+        if(err){
+            throw err;
+        }
+
+       let nekretnine = JSON.parse(data);
+
+       let trazenaNekretnina = nekretnine.find(nekretnina => nekretnina.id === idNekretnine);
+
+       if(trazenaNekretnina){
+            fs.readFile('data/korisnici.json','utf-8',function(err,data){
+                
+                let korisnici = JSON.parse(data);
+
+                let upitiSaUsername = trazenaNekretnina.upiti.map(upit => {
+                    let trazeniKorisnik = korisnici.find(korisnik => korisnik.id === upit.korisnik_id);
+
+                    if (trazeniKorisnik) {
+                        return {
+                            korisnik_username: trazeniKorisnik.username,
+                            tekst_upita: upit.tekst_upita
+                        };
+                    } else {
+                        return upit; 
+                    }
+                });
+
+                trazenaNekretnina.upiti = upitiSaUsername;
+
+                res.status(200).json(trazenaNekretnina);
+            });
+       }
+       else{
+            res.status(400).json({ greska: `Nekretnina sa id-em ${idNekretnine} ne postoji` });
+       }
+    });
 });
 
 function jesuLiIstiNizovi(stariNizDatoteka,noviNizDatoteka){

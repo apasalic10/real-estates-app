@@ -18,6 +18,10 @@
             {
                 "korisnik_id": 2,
                 "tekst_upita": "Phasellus viverra nulla."
+            },
+            {
+                "korisnik_id": 2,
+                "tekst_upita": "Odlicno"
             }
         ]
     },
@@ -38,8 +42,12 @@
                 "tekst_upita": "Integer tincidunt."
             },
             {
+                "korisnik_id": 2,
+                "tekst_upita": "Novi upit"
+            },
+            {
                 "korisnik_id": 1,
-                "tekst_upita": "Ovo je novododani upit"
+                "tekst_upita": "Novi upit 1"
             }
         ]
     },
@@ -80,10 +88,6 @@
             {
                 "korisnik_id": 2,
                 "tekst_upita": "Integer tincidunt."
-            },
-            {
-                "korisnik_id": 1,
-                "tekst_upita": "Ovo je novododani upit"
             }
         ]
     }

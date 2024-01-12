@@ -36,7 +36,7 @@ body {
     height: 185px;
 }
 
-.real-estates-item button {
+.real-estates-item .details-button {
     margin: 0 auto;
     display: block;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
@@ -123,4 +123,26 @@ header {
     box-sizing: border-box;
     width: 500px;
     grid-column: span 2;
+}
+
+.podaci{
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.open-details-button{
+    margin: 0 auto;
+    display: none;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    border-radius: 10%;
+    width: 50%;
+    margin-left: 5px;
+}
+
+.real-estates-buttons {
+    display: flex;
+    justify-content: space-around; /* Da bi dugmadi bila na sredini */
+    align-items: center; /* Centriranje po vertikali */
 }

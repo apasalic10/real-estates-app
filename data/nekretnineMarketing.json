@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "klikovi": 29,
-        "pretrage": 48
+        "klikovi": 50,
+        "pretrage": 199
     },
     {
         "id": 4,
-        "klikovi": 8,
-        "pretrage": 51
+        "klikovi": 28,
+        "pretrage": 202
     },
     {
         "id": 2,
-        "klikovi": 0,
-        "pretrage": 39
+        "klikovi": 16,
+        "pretrage": 190
     },
     {
         "id": 3,
-        "klikovi": 0,
-        "pretrage": 38
+        "klikovi": 45,
+        "pretrage": 189
     }
 ]
