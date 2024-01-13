@@ -7,6 +7,7 @@ window.onload = function() {
     meni = document.getElementById("menu-screen");
     prijavaListItem = meni.contentWindow.document.getElementById("prijavaItem");
     profilMenuItem = meni.contentWindow.document.getElementById("profilItem");
+    profilMenuItem.style.display = "none";
     frameDiv = document.querySelector(".details-frame");
     PoziviAjax.getKorisnik(logovanKorisnik);   
 }

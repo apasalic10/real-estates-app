@@ -70,6 +70,10 @@
             {
                 "korisnik_id": 1,
                 "tekst_upita": "Ovo je novododani upit"
+            },
+            {
+                "korisnik_id": 2,
+                "tekst_upita": "Testni upit"
             }
         ]
     },
