@@ -1,4 +1,14 @@
 async function spojiDetaljeNekretnine(nekretnina){
+
+    var dateString = nekretnina.datum_objave;
+    var parsedDate = new Date(dateString);
+
+    var dan = parsedDate.getDate().toString().padStart(2, "0");
+    var mjesec = (parsedDate.getMonth() + 1).toString().padStart(2, "0");
+    var godina = parsedDate.getFullYear();
+
+    var novoFormatiraniDatum = dan + "." + mjesec + "." + godina;
+
     let detailsHTML = `
         <div class="details">
         <h3>OSNOVNO</h3>
@@ -14,7 +24,7 @@ async function spojiDetaljeNekretnine(nekretnina){
             <p class="grid-item"><strong>Tip grijanja: </strong>${nekretnina.tip_grijanja}</p>
             <p class="grid-item"><strong>Godina izgradnje: </strong>${nekretnina.godina_izgradnje}</p>
             <p class="grid-item"><strong>Lokacija: </strong>${nekretnina.lokacija}</p>
-            <p class="grid-item"><strong>Datum objave: </strong>${nekretnina.datum_objave}</p>
+            <p class="grid-item"><strong>Datum objave: </strong>${novoFormatiraniDatum}</p>
             <p class="grid-item-description"><strong>Opis: </strong>${nekretnina.opis}</p>
         </div>   
         </div>
