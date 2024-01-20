@@ -20,21 +20,20 @@ async function spojiDetaljeNekretnine(nekretnina){
         </div>
 
         <h3>UPITI</h3>`;
-        if(nekretnina.upiti.length !== 0){
-            detailsHTML += `<div id="upiti">
-            <ul class="lista-upita">
-            `;
+        detailsHTML += `<div id="upiti">
+        <ul class="lista-upita">`;
 
+        if(nekretnina.upiti.length !== 0){
             nekretnina.upiti.forEach(upit => {
                 detailsHTML += `<li>
                 <div class="korisnik">${upit.korisnik_username}</div>
                 <div class="upit">${upit.tekst_upita}</div>
                 </li>`;
             });
-            
-            detailsHTML += `</ul>
-            </div>`;
         }
+
+        detailsHTML += `</ul>
+        </div>`;
         
     let frameDetails = document.querySelector(".details-frame");
     frameDetails.innerHTML = detailsHTML;
