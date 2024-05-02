@@ -4,8 +4,8 @@
 This Real Estate Viewer application allows users to browse properties (apartments, houses, and commercial spaces). It utilizes a MySQL database and Node.js, Express.js, HTML, and CSS for the backend.
 
 ## Installation:
-1. Clone the repository: `git clone https://github.com/yourusername/real-estate-viewer-app.git`
-2. Navigate to the project directory: `cd real-estate-viewer-app`
+1. Clone the repository: `git clone https://github.com/apasalic10/real-estates-app`
+2. Navigate to the project directory: `cd real-estates-app`
 3. Install dependencies:
    ```bash
    npm install
